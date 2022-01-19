@@ -1,0 +1,19 @@
+package repository;
+
+import model.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface StudentRepository extends JpaRepository<Student,Integer>{
+
+    Optional<Student> findById(Integer id);
+    /*List<Student> findAll();
+    Student save(Student student);
+    boolean existsById(Integer id);
+    void deleteById(Integer id);*/
+
+}
